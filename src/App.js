@@ -38,7 +38,7 @@ function App() {
   }
   return (
     <>
-      <BrowserRouter basename="/Text-Utils">
+      <BrowserRouter basename="/">
 
         {/* this is main file which render root from index file */}
         {/* Here if I put all html code then it will look like mess */}
