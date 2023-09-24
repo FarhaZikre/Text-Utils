@@ -38,7 +38,7 @@ function App() {
   }
   return (
     <>
-      <BrowserRouter basename="">
+      <BrowserRouter basename="/Text-Utils">
 
         {/* this is main file which render root from index file */}
         {/* Here if I put all html code then it will look like mess */}
@@ -56,8 +56,8 @@ function App() {
 
           <Routes>  
             {/* <Route path='Path You want to use' element={<What you want to render >}/> */}
-            <Route exact path="/Text-Utils" element={<TextData heading="Enter your text to Analyze" mode={mode} />}></Route>
-            <Route exact path="/about" element={<About mode={mode}/>}></Route>
+            <Route exact path= '/' element={<TextData heading="Enter your text to Analyze" mode={mode} />}></Route>
+            <Route exact path='/about' element={<About mode={mode}/>}></Route>
             {/* for this path-> is set in navbar */}
             {/* exact path = react uses partial matching so it is efficirnt to use exact path */}
             {/* /users -----> componenet 1
