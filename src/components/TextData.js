@@ -45,22 +45,24 @@ export default function TextData(props) {
     return (
         <>
 
-            <div className='container mx-5 my-3' style={{color: props.mode==='dark'? 'white':'black'}}>
+            <div className='container mx-lg-5 mx-2 my-3' style={{color: props.mode==='dark'? 'white':'black'}}>
                 <h1>{props.heading}</h1>
                 <div className="mb-3">
                     <textarea className="form-control" value={text} onChange={handleOnChange} id="myBox" rows="10" 
                     style={{backgroundColor: props.mode==='dark'? 'grey':'white',color: props.mode==='dark'? 'white':'black'}}></textarea>
                     {/* to get this props.mode we need 2 previous actions 1. props name should be in starting function 2.mode should be send from rendering in app.js file definig component*/}
                 </div>
+                <div className="d-flex flex-wrap">
                 <button className="btn btn-primary mx-2 my-2" onClick={uppercase}>Convert to Uppercase</button>
                 <button className="btn btn-primary mx-2 my-2" onClick={lowercase}>Convert to Lowercase</button>
                 <button className="btn btn-primary mx-2 my-2" onClick={speak}>Speak</button>
                 <button className="btn btn-primary mx-2 my-2" onClick={copyclipboard}>Copy-To-Clipboard</button>
                 <button className="btn btn-primary mx-2 my-2" onClick={removeExtraSpace}>Remove-Extra-Space</button>
                 <button className="btn btn-primary mx-2 my-2" onClick={cleartext}>Clear-Text</button>
+                </div>
             </div>
 
-            <div className="container my-2 mx-5" style={{color: props.mode==='dark'? 'white':'black'}}>
+            <div className="container my-2 mx-2 mx-lg-5" style={{color: props.mode==='dark'? 'white':'black'}}>
                 <h2>Your Text Summary...</h2>
                 <p>{text.trim().length} characters, {text.replace(/\n/g, " ").split(' ').filter(value => value !== "").length} words</p>
                 <p>{0.008 * text.replace(/\n/g, " ").split(' ').filter(value => value !== "").length} Minutes to Read</p>
